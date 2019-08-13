@@ -1,0 +1,7 @@
+node_modules
+
+tmp/uploads/*
+!tmp/uploads/.gitkeep
+
+logs/*
+!logs/.gitkeep
