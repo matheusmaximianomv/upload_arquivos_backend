@@ -32,6 +32,9 @@ app.use(express.urlencoded({
 
 /* Configuração da Rota de Acesso a Imagens */
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')));
+app.use('/download', (req, res) => {
+    return res.status(200).download(path.resolve(__dirname, '..', 'logs', 'access.log'));
+});
 /* Rotas */
 app.use(require('./routes'));
 
